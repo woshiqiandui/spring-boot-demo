@@ -1,2 +1,4 @@
-com\example\demo\ServletInitializer.class
+com\example\demo\beans\Book.class
 com\example\demo\SpringBootDemoApplication.class
+com\example\demo\mappers\BookMapper.class
+com\example\demo\ServletInitializer.class

@@ -1,2 +1,4 @@
-W:\workspace\spring-boot-demo\src\main\java\com\example\demo\SpringBootDemoApplication.java
-W:\workspace\spring-boot-demo\src\main\java\com\example\demo\ServletInitializer.java
+D:\workspace\spring-boot-demo\src\main\java\com\example\demo\beans\Book.java
+D:\workspace\spring-boot-demo\src\main\java\com\example\demo\mappers\BookMapper.java
+D:\workspace\spring-boot-demo\src\main\java\com\example\demo\SpringBootDemoApplication.java
+D:\workspace\spring-boot-demo\src\main\java\com\example\demo\ServletInitializer.java

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mappers.BookMapper" >
+<resultMap id="BaseResultMap" type="com.example.demo.beans.Book">
+  <result column="name" property="name" jdbcType="VARCHAR"></result>
+  <result column="age" property="age" jdbcType="INTEGER"></result>
+</resultMap>
+    <select id="selectByName" parameterType="String" resultMap="BaseResultMap">
+        SELECT * FROM book WHERE NAME = #{name}
+    </select>
+    <select id="selectByAge" parameterType="Integer" resultMap="BaseResultMap">
+        SELECT * FROM book WHERE AGE = #{age}
+    </select>
+</mapper>

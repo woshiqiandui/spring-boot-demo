@@ -2,13 +2,23 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.demo.mappers.BookMapper" >
 <resultMap id="BaseResultMap" type="com.example.demo.beans.Book">
+  <result column="id" property="id" jdbcType="VARCHAR"></result>
   <result column="name" property="name" jdbcType="VARCHAR"></result>
-  <result column="age" property="age" jdbcType="INTEGER"></result>
+  <result column="writer" property="writer" jdbcType="VARCHAR"></result>
+  <result column="ISBN" property="ISBN" jdbcType="VARCHAR"></result>
+  <result column="publisher" property="publisher" jdbcType="VARCHAR"></result>
+  <result column="check_in_date" property="checkInDate" jdbcType="VARCHAR"></result>
+  <result column="publish_date" property="publishDate" jdbcType="VARCHAR"></result>
+  <result column="type" property="type" jdbcType="VARCHAR"></result>
+  <result column="simple_info" property="simpleInfo" jdbcType="VARCHAR"></result>
+  <result column="rent" property="rent" jdbcType="VARCHAR"></result>
+  <result column="other" property="other" jdbcType="VARCHAR"></result>
 </resultMap>
     <select id="selectByName" parameterType="String" resultMap="BaseResultMap">
         SELECT * FROM book WHERE NAME = #{name}
     </select>
-    <select id="selectByAge" parameterType="Integer" resultMap="BaseResultMap">
-        SELECT * FROM book WHERE AGE = #{age}
+
+    <select id="selectById" parameterType="String" resultMap="BaseResultMap">
+        SELECT * FROM book WHERE Id = #{id}
     </select>
 </mapper>

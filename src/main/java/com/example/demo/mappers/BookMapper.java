@@ -7,5 +7,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface BookMapper {
     Book selectByName(String name);
 
-    Book selectByAge(Integer age);
+    Book selectById(String id);
 }

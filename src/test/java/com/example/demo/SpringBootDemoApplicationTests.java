@@ -19,14 +19,9 @@ public class SpringBootDemoApplicationTests {
 
     @Test
     public void contextLoads() {
-        String name2 = "陈迁对";
-        Book book = bookMapper.selectByName(name2);
-        if(book!=null){
-            System.out.println("age="+book.getAge());
-            System.out.println("NAME="+book.getName());
-        }else{
-            System.out.println("book="+book);
-        }
+        String id = "10";
+        Book book = bookMapper.selectById(id);
+       System.out.println(book);
 
 
     }

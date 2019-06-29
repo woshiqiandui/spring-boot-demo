@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://47.98.135.123:5555/test?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: wsqd19950428
+    driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  port: 8010
+  tomcat:
+    uri-encoding: UTF-8
+
+mybatis:
+  mapper-locations:
+    classpath:mybatis/mapper/*.xml

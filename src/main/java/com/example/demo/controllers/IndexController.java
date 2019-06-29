@@ -14,7 +14,7 @@ public class IndexController {
 
     @Autowired
     IndexService indexService;
-    @RequestMapping
+    @RequestMapping("/index")
     String index(){
         return indexService.index();
     }

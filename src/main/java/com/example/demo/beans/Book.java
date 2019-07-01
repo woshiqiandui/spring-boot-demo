@@ -1,138 +1,78 @@
 package com.example.demo.beans;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import java.util.Date;
-
-@Component
+@Entity
 public class Book {
-    private String id;
-    private String name;
-    private String writer;
-    private String ISBN;
-    private String publisher;
-    private Date checkInDate;
-    private Date publishDate;
-    private Double price;
-    private String type;
-    private String simpleInfo;
-    private Double rent;
-    private String other;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String reader;
+    private String isbn;
+    private String title;
+    private String author;
+    private String description;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getReader() {
+        return reader;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setReader(String reader) {
+        this.reader = reader;
     }
 
-
-    public String getISBN() {
-        return ISBN;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
-    public String getPublisher() {
-        return publisher;
+    public String getTitle() {
+        return title;
     }
 
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public Date getCheckInDate() {
-        return checkInDate;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setCheckInDate(Date checkInDate) {
-        this.checkInDate = checkInDate;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public Date getPublishDate() {
-        return publishDate;
+    public String getDescription() {
+        return description;
     }
 
-    public void setPublishDate(Date publishDate) {
-        this.publishDate = publishDate;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-
-
-    public Double getRent() {
-        return rent;
-    }
-
-    public void setRent(Double rent) {
-        this.rent = rent;
-    }
-
-    public String getOther() {
-        return other;
-    }
-
-    public void setOther(String other) {
-        this.other = other;
-    }
-
-    public String getWriter() {
-        return writer;
-    }
-
-    public void setWriter(String writer) {
-        this.writer = writer;
-    }
-
-    public String getSimpleInfo() {
-        return simpleInfo;
-    }
-
-    public void setSimpleInfo(String simpleInfo) {
-        this.simpleInfo = simpleInfo;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", writer='" + writer + '\'' +
-                ", ISBN='" + ISBN + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", checkInDate=" + checkInDate +
-                ", publishDate=" + publishDate +
-                ", price=" + price +
-                ", type='" + type + '\'' +
-                ", simpleInfo='" + simpleInfo + '\'' +
-                ", rent=" + rent +
-                ", other='" + other + '\'' +
+                "id=" + id +
+                ", reader='" + reader + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

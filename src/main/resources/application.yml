@@ -5,11 +5,17 @@ spring:
     password: wsqd19950428
     driver-class-name: com.mysql.jdbc.Driver
 
+    # 初始化大小，最小，最大
+    initialSize: 5
+    minIdleSize: 10
+    maxActive: 1000
+    # 获取配置连接的等待超时时间
+
 server:
   port: 8010
   tomcat:
     uri-encoding: UTF-8
 
 mybatis:
-  mapper-locations:
-    classpath:mybatis/mapper/*.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+

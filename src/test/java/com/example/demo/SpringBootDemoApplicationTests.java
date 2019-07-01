@@ -1,8 +1,8 @@
 package com.example.demo;
 
+import com.example.demo.mappers.BookDemoMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import com.example.demo.beans.Book;
-import com.example.demo.mappers.BookMapper;
+import com.example.demo.beans.BookDemo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,21 +11,19 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Map;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ComponentScan(basePackages="com.example.demo.*")
 public class SpringBootDemoApplicationTests {
 
     @Autowired
-    private BookMapper bookMapper;
+    private BookDemoMapper bookDemoMapper;
 
     @Test
     public void contextLoads() {
         String id = "10";
-        Book book = bookMapper.selectById(id);
-       System.out.println(book);
+        BookDemo bookDemo = bookDemoMapper.selectById(id);
+       System.out.println(bookDemo);
 
     }
     @Test

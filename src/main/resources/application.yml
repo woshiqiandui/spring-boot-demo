@@ -1,6 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mysql://47.98.135.123:5555/test?useUnicode=true&characterEncoding=utf8
+    # 服务器上的数据库
+    # url: jdbc:mysql://47.98.135.123:5555/test?useUnicode=true&characterEncoding=utf8
+    # 本地测试数据库
+    url: jdbc:mysql://127.0.0.1:55555/test?useUnicode=true&characterEncoding=utf8
     username: root
     password: wsqd19950428
     driver-class-name: com.mysql.jdbc.Driver

@@ -8,7 +8,7 @@ import java.util.Map;
 @Controller
 public class ThymeLeafDemoController {
 
-    @RequestMapping("testThymeleaf")
+    @RequestMapping("/testThymeleaf")
     public String demo(Map<String,Object> paramMap){
         paramMap.put("name","陈迁对");
         paramMap.put("age",24);

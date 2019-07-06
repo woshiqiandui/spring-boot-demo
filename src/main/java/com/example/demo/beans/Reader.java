@@ -1,6 +1,5 @@
 package com.example.demo.beans;
 
-import org.springframework.context.annotation.EnableMBeanExport;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,6 +12,7 @@ import java.util.Collection;
 @Entity
 public class Reader implements UserDetails {
 
+    private static final long serialVersionUID = 1L;
     @Id
     private String username;
 
@@ -78,4 +78,6 @@ public class Reader implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
 }

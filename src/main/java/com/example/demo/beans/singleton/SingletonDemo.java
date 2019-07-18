@@ -1,4 +1,4 @@
-package com.example.demo.beans;
+package com.example.demo.beans.singleton;
 
 /**
  * @author 陈迁对
@@ -65,4 +65,6 @@ public class SingletonDemo {
         }
         return singletonDemo;
     }
+
+
 }

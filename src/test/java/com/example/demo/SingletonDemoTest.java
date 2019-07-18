@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.beans.SingletonDemo;
+import com.example.demo.beans.singleton.SingletonDemo;
 
 /**
  * @author 陈迁对

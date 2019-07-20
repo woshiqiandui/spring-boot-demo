@@ -16,6 +16,15 @@ package com.example.demo.beans.singleton;
 public class LazySingleton {
     private static LazySingleton instance = null;
 
+    private  String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
     private LazySingleton() { }
 
     /**

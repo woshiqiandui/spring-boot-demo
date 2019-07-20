@@ -18,8 +18,25 @@ public class EagerSingleton {
      * final 保证唯一性
      */
     private static final EagerSingleton instance = new EagerSingleton();
-    private EagerSingleton() { }
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private EagerSingleton() {  }
     public static EagerSingleton getInstance() {
         return instance;
+    }
+
+    @Override
+    public String toString() {
+        return "EagerSingleton{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

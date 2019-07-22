@@ -15,12 +15,8 @@ import java.util.List;
 @RequestMapping("/readingList")
 public class ReadingListController {
 
-    private ReadingListRepository readingListRepository;
-
     @Autowired
-    public void setReadingListRepository(ReadingListRepository readingListRepository) {
-        this.readingListRepository = readingListRepository;
-    }
+    private ReadingListRepository readingListRepository;
 
     @RequestMapping(value = "/{reader}",method = RequestMethod.GET)
     public String readersBooks(@PathVariable("reader")String reader, Model model){

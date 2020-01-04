@@ -1,6 +1,0 @@
-com\example\demo\services\IndexService.class
-com\example\demo\beans\Book.class
-com\example\demo\controllers\IndexController.class
-com\example\demo\SpringBootDemoApplication.class
-com\example\demo\mappers\BookMapper.class
-com\example\demo\ServletInitializer.class

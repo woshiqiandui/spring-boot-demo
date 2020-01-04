@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<!-- xmlns 作用：由于xml允许定义自己的标记，但你定义的标记和其他人定义的标记有可能相同，但表示不同的含义。
+当文档交换或者共享的时候就容易产生错误。为避免这种错误产生，xml采用名字空间声明，允许你通过一个网址来识别你的标记。  -->
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>
+      测试 Thymeleaf
+    </title>
+</head>
+<body>
+<label>名字: </label><span th:text="${name}">未知</span>
+<label>年龄: </label><span th:text="${age}">未知</span>
+</body>
+</html>

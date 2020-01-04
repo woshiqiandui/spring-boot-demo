@@ -4,22 +4,39 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Arrays;
 import java.util.Collection;
 
 @Entity
+
+@Table(name="READER")
 public class Reader implements UserDetails {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @Column(name="ID",columnDefinition = "int(11)")
+    private String id;
+
+    @Column(name="USER_NAME",columnDefinition = "char(255)")
     private String username;
 
+    @Column(name="FULL_NAME",columnDefinition = "char(255)")
     private String fullname;
 
+    @Column(name="PASS_WORD",columnDefinition = "char(255)")
     private String password;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     @Override
     public String getUsername() {

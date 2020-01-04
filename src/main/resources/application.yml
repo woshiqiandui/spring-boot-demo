@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    # 服务器上的数据库
+    url: jdbc:mysql://47.98.135.123:5555/test?useUnicode=true&characterEncoding=utf8
+    # 本地测试数据库
+    # url: jdbc:mysql://127.0.0.1:55555/test?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: wsqd19950428
+    driver-class-name: com.mysql.jdbc.Driver
+
+    # 初始化大小，最小，最大
+    initialSize: 5
+    minIdleSize: 10
+    maxActive: 1000
+    # 获取配置连接的等待超时时间
+
+#  SecurityConfig 如果不写配置，就在这里直接写登录名称和密码好了（unsafe）
+#  security:
+#    user:
+#      name: user
+#      password: 123456
+#      roles: user, admin
+
+server:
+  port: 8010
+  tomcat:
+    uri-encoding: UTF-8
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+

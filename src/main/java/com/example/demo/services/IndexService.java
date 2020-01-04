@@ -1,7 +1,7 @@
 package com.example.demo.services;
 
-import com.example.demo.beans.Book;
-import com.example.demo.mappers.BookMapper;
+import com.example.demo.beans.BookDemo;
+import com.example.demo.mappers.BookDemoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class IndexService {
     @Autowired
-    BookMapper bookMapper;
+    BookDemoMapper bookDemoMapper;
 
     public String index() {
         String id = "10";
-        Book book = bookMapper.selectById(id);
-       return  book.toString();
+        BookDemo bookDemo = bookDemoMapper.selectById(id);
+       return  bookDemo.toString();
     }
 }

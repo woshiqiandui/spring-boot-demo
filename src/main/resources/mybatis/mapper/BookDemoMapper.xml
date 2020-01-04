@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.demo.mappers.BookMapper" >
-<resultMap id="BaseResultMap" type="com.example.demo.beans.Book">
+<mapper namespace="com.example.demo.mappers.BookDemoMapper" >
+<resultMap id="BaseResultMap" type="com.example.demo.beans.BookDemo">
   <result column="id" property="id" jdbcType="VARCHAR"></result>
   <result column="name" property="name" jdbcType="VARCHAR"></result>
   <result column="writer" property="writer" jdbcType="VARCHAR"></result>
@@ -15,10 +15,10 @@
   <result column="other" property="other" jdbcType="VARCHAR"></result>
 </resultMap>
     <select id="selectByName" parameterType="String" resultMap="BaseResultMap">
-        SELECT * FROM book WHERE NAME = #{name}
+        SELECT * FROM bookDemo WHERE NAME = #{name}
     </select>
 
     <select id="selectById" parameterType="String" resultMap="BaseResultMap">
-        SELECT * FROM book WHERE Id = #{id}
+        SELECT * FROM bookDemo WHERE Id = #{id}
     </select>
 </mapper>

@@ -73,7 +73,7 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <!-- vue 以webjars 方式引入
-        http://localhost:8010/webjars/vue/1.0.21/dist/vue.js 可以直接访问这个js（如果静态资源设定为默认路径）
+        http://localhost:8010/webjars/vue/1.0.21/dist/vue.js 可以直接访问这个js 
         -->
         <dependency>
         <groupId>org.webjars.bower</groupId>

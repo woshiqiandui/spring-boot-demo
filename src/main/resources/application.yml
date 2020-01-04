@@ -22,8 +22,8 @@ spring:
   #/ 根目录
 
   # 如果不指定则这几个都生效
-#  resources:
-#    static-locations: classpath:/static/
+  resources:
+    static-locations: classpath:/static/
 
 #  security:
 #    user:

@@ -11,9 +11,11 @@ import javax.persistence.Table;
 import java.util.Arrays;
 import java.util.Collection;
 
-@Entity
 
-@Table(name="READER")
+@Entity
+// 表名 写 READER 或者 reader 都是一样的 参考ImprovedNamingStrategy
+// hibernate 默认表名和类名完全映射，如果是 ReaderHistory => reader_history (默认转换为下划线+名称) 或者你配置 @Table(name="readerHistory")  也会转换为 reader_history
+@Table(name="reader")
 public class Reader implements UserDetails {
 
     private static final long serialVersionUID = 1L;

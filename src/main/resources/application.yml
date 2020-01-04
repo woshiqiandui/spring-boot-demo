@@ -14,7 +14,17 @@ spring:
     maxActive: 1000
     # 获取配置连接的等待超时时间
 
-#  SecurityConfig 如果不写配置，就在这里直接写登录名称和密码好了（unsafe）
+  #静态资源在如下位置为默认文件夹（5个）：
+  #/META-INF/resources
+  #/resources
+  #/static/
+  #/public/
+  #/ 根目录
+
+  # 如果不指定则这几个都生效
+#  resources:
+#    static-locations: classpath:/static/
+
 #  security:
 #    user:
 #      name: user

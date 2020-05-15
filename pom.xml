@@ -83,6 +83,14 @@
         <artifactId>vue</artifactId>
         <version>1.0.21</version>
         </dependency>
+
+        <!-- 布隆过滤器 -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
+        </dependency>
+
         <!-- 测试工具 -->
         <dependency>
             <groupId>junit</groupId>

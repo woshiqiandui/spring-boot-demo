@@ -1,13 +1,13 @@
 spring:
   datasource:
     # 服务器上的数据库
-    url: jdbc:mysql://47.98.135.123:5555/test?useUnicode=true&characterEncoding=utf8&useSSL=false
+    #  url: jdbc:mysql://47.98.135.123:5555/test?useUnicode=true&characterEncoding=utf8&useSSL=false
     # 本地测试数据库
-    # url: jdbc:mysql://127.0.0.1:5555/test?useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:5555/test?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=TRUE&serverTimezone=UTC
     username: root
-    password: wsqd19950428
-    #password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+    #password: wsqd19950428
+    password: 123456
+    #driver-class-name: com.mysql.jdbc.Driver 5.5后的版本不用配置这个 官方更推荐MySQL5.6以上使用connector/j 8.0
 
     # 初始化大小，最小，最大
     initialSize: 5
